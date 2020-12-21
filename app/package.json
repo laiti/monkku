@@ -1,0 +1,48 @@
+{
+  "name": "monkku",
+  "version": "1.0.0",
+  "description": "A Telegram game about time",
+  "main": "compiled/app/handlers/index.js",
+  "scripts": {
+    "build": "tsc",
+    "eslint": "./node_modules/eslint/bin/eslint.js source --ext .ts,.js",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laiti/monkku.git"
+  },
+  "keywords": [
+    "monkku",
+    "telegram"
+  ],
+  "author": "Antti Laiti <antti@laiti.fi>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laiti/monkku/issues"
+  },
+  "homepage": "https://github.com/laiti/monkku#readme",
+  "dependencies": {
+    "config": "^3.3.3",
+    "telegram-bot-api": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.66",
+    "@types/config": "0.0.37",
+    "@types/jest": "^26.0.19",
+    "@types/node": "^14.14.14",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "aws-sdk": "^2.814.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "husky": "^4.3.6",
+    "jest": "^26.6.3",
+    "lambda-local": "^1.7.4",
+    "prettier": "^2.2.1",
+    "supertest": "^6.0.1",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.3"
+  }
+}
