@@ -1,0 +1,23 @@
+{
+  "name": "monkku",
+  "version": "1.0.0",
+  "description": "A Telegram game about time",
+  "main": "app/handlers/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laiti/monkku.git"
+  },
+  "keywords": [
+    "monkku",
+    "telegram"
+  ],
+  "author": "Antti Laiti <antti@laiti.fi>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laiti/monkku/issues"
+  },
+  "homepage": "https://github.com/laiti/monkku#readme"
+}
