@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/laiti/monkku#readme",
   "dependencies": {
-    "config": "^3.3.3"
+    "config": "^3.3.3",
+    "telegram-bot-api": "^2.0.1"
   }
 }
