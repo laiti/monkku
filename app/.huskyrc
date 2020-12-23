@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-push": "npm run eslint"
+    "pre-push": "npm run eslint && npm run test"
   }
 }
