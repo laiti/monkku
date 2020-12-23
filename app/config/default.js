@@ -5,16 +5,14 @@ const configuration = {
   aws: {
     region: 'eu-west-1',
   },
-  database: {
-    dynamoDB: {
-      tableName: '',
-      apiVersion: '2012-08-10',
-    },
-    mongo: {
-      user: '',
-      password: '',
-      database: '',
-    },
+  dynamoDB: {
+    tableName: '',
+    apiVersion: '2012-08-10',
+  },
+  mongo: {
+    user: '',
+    password: '',
+    database: '',
   },
 
   // If dynamic  is set, it overrides the static times
