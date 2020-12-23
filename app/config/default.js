@@ -1,6 +1,7 @@
 const configuration = {
   telegram: {
     chatId: '',
+    apiKey: '',
   },
   aws: {
     region: 'eu-west-1',
@@ -17,7 +18,8 @@ const configuration = {
 
   // If dynamic  is set, it overrides the static times
   times: {
-    static: ['13:34', '13:37', '14:27'],
+    staticWeekday: ['13:34', '13:37', '14:27'],
+    staticWeekend: ['13:37', '14:17', '15:27', '16:17'],
     dynamic: false,
   },
 
