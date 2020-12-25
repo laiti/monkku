@@ -31,10 +31,11 @@ export interface ScoreConfig {
   bonusPerSec: number;
 }
 
-export default interface Config {
+export interface Config {
   telegram: TelegramConfig;
-  times: TimesConfig;
+  aws: AWSConfig;
   dynamoDB: DynamoDBConfig;
   mongo: MongoConfig;
+  times: TimesConfig;
   score: ScoreConfig;
 }
