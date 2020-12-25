@@ -12,6 +12,7 @@ export interface DynamoDBConfig {
 export interface TelegramConfig {
   chatId: string;
   apiKey: string;
+  apiUrl: string;
 }
 
 export interface AWSConfig {

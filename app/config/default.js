@@ -2,6 +2,7 @@ const configuration = {
   telegram: {
     chatId: '',
     apiKey: '',
+    apiUrl: 'https://api.telegram.org/bot',
   },
   aws: {
     region: 'eu-west-1',

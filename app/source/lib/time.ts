@@ -1,8 +1,11 @@
 export default class TimeGenerator {
   async randomDate(minDate: Date, maxDate: Date): Promise<Date> {
-    const randDate = new Date(
-      minDate.getTime() + Math.random() * (maxDate.getTime() - minDate.getTime()),
-    );
+    const minTime = minDate.getTime();
+    const maxTime = maxDate.getTime();
+    if (minTime > maxTime) {
+      throw new Error('minDate is after MaxDate');
+    }
+    const randDate = new Date(minTime + Math.random() * (maxTime - minTime));
     return randDate;
   }
 
