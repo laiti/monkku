@@ -14,10 +14,17 @@ export interface TelegramConfig {
   apiKey: string;
 }
 
+export interface AWSConfig {
+  region: string;
+}
+
 export interface TimesConfig {
   staticWeekday: string[];
   staticWeekend: string[];
   dynamic: boolean;
+  playTime: string[];
+  announceTime: string;
+  specialDates: Record<string, unknown>;
 }
 
 export interface ScoreConfig {
