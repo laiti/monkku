@@ -14,23 +14,11 @@ export default class Telegram {
       text: message,
       disable_notification: true,
     };
-    let response: Promise<AxiosResponse<never>>;
-    try {
-      response = axios.post(msgUrl, request);
-    } catch (err) {
-      throw new Error(err);
-    }
-    return response;
+    return axios.post(msgUrl, request);
   }
 
   async getMsgs(): Promise<AxiosResponse<never>> {
     const msgUrl = `${this.config.apiUrl}${this.config.apiKey}/getMe`;
-    let response: Promise<AxiosResponse<never>>;
-    try {
-      response = axios.get(msgUrl);
-    } catch (err) {
-      throw new Error(err);
-    }
-    return response;
+    return axios.get(msgUrl);
   }
 }

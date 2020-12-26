@@ -41,6 +41,17 @@ describe('Telegram', () => {
       expect(result).toBeTruthy();
     });
 
+    /*
+    test('Handle error from API', async () => {
+      const postSpy = jest
+        .spyOn(axios, 'post')
+        .mockRejectedValueOnce(() => Promise.reject('API Call failed'));
+      const promise = telegram.sendMsg('foo');
+      expect(postSpy).toHaveBeenCalled();
+      expect(promise).rejects.toThrowError();
+    });
+    */
+
     test('Get messages', async () => {
       const response = {
         ok: true,
