@@ -25,11 +25,13 @@ export interface TimesConfig {
   dynamic: boolean;
   playTime: string[];
   announceTime: string;
-  specialDates: Record<string, unknown>;
+  days: Record<string, unknown>;
+  randomDays: Record<string, unknown>;
 }
 
 export interface ScoreConfig {
   bonusPerSec: number;
+  monniBonus: number;
 }
 
 export interface Config {

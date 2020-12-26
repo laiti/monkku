@@ -24,16 +24,26 @@ const configuration = {
     dynamic: false,
     playTime: ['10:00', '20:00'],
     announceTime: '09:30',
-    specialDates: {
-      '24.12.': [2, 'hyvää joulua wuu'],
+    days: {
+      '6.12.': [2, 'isäm maalliin bonus'],
+      '24.12.': [3, 'hyvää joulua wuu'],
+    },
+    randomDays: {
+      '1:100': [0, 'pengarna gå till rymd'],
+      '1:100': [2, 'dubbel pengarna wuu'],
+      '1:200': [3, 'tribbel pengarna WUU'],
+      '1:100': ['bossi', 'bossi ryösti potin'],
+      '1:100': ['oppositeDay', 'rahet lahjoitettiin monnin uhrien muistolle'],
+      '1:100': ['robinHood', 'rahet ryöstettiin rikkaalta monnilta ja annettiin köyhälle spedelle'],
     },
   },
-
   // Give bonus point for each bonusPerSec seconds that occur
   // between the /monkku command and end of last time in case
   // there were no other players
+  // monniBonus: bonus if monkku was played during the last N seconds
   score: {
     bonusPerSec: 10,
+    monniBonus: 1,
   },
 };
 
