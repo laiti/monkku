@@ -15,9 +15,7 @@
       "*": ["node_modules/*"]
     }
   },
-  "include": [
-    "./source/**/*"
-  ],
+  "include": [ "./source/**/*", "ditched/message.d.ts" ],
   "exclude": [
     "node_modules",
     "**/*.test.ts"

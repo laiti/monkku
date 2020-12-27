@@ -3,6 +3,7 @@ const configuration = {
     chatId: '',
     apiKey: '',
     apiUrl: 'https://api.telegram.org/bot',
+    sendOptions: { disableWebPagePreview: true, disableNotification: true },
   },
   aws: {
     region: 'eu-west-1',
@@ -24,6 +25,7 @@ const configuration = {
     dynamic: false,
     playTime: ['10:00', '20:00'],
     announceTime: '09:30',
+    timeWindow: 1,
     days: {
       '6.12.': [2, 'isäm maalliin bonus'],
       '24.12.': [3, 'hyvää joulua wuu'],
@@ -45,6 +47,20 @@ const configuration = {
     bonusPerSec: 10,
     monniBonus: 1,
   },
+
+  monkku: {
+    commandPrefix: '/monkku',
+    bossi: 'bossi',
+    monni: 'monni',
+    team: 'Monni & The Bois',
+  },
+
+  messages: {
+    totalPot: 'Rahee jaossa',
+    players: 'Messis',
+  },
+
+  logLevel: info,
 };
 
 module.exports = configuration;

@@ -1,5 +1,5 @@
-import Random from '../../../source/lib/random';
-import TimeGenerator from '../../../source/lib/time';
+import Random from '../../../../source/lib/util/random';
+import TimeGenerator from '../../../../source/lib/util/time';
 
 describe('Random', () => {
   const random = new Random();

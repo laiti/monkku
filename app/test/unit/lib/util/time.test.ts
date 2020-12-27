@@ -1,4 +1,4 @@
-import TimeGenerator from '../../../source/lib/time';
+import TimeGenerator from '../../../../source/lib/util/time';
 
 describe('Time', () => {
   const timeGenerator = new TimeGenerator();

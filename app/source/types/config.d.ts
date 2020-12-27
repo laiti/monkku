@@ -1,3 +1,5 @@
+import { LogLevel } from '../lib/util/logy';
+
 export interface MongoConfig {
   user: string;
   password: string;
@@ -13,6 +15,7 @@ export interface TelegramConfig {
   chatId: string;
   apiKey: string;
   apiUrl: string;
+  sendOptions: Record<string, unknown>;
 }
 
 export interface AWSConfig {
@@ -25,6 +28,7 @@ export interface TimesConfig {
   dynamic: boolean;
   playTime: string[];
   announceTime: string;
+  timeWindow: number;
   days: Record<string, unknown>;
   randomDays: Record<string, unknown>;
 }
@@ -34,6 +38,18 @@ export interface ScoreConfig {
   monniBonus: number;
 }
 
+export interface MonkkuConfig {
+  commandPrefix: string;
+  bossi: string;
+  monni: string;
+  team: string;
+}
+
+export interface MessageConfig {
+  totalPot: string;
+  players: string;
+}
+
 export interface Config {
   telegram: TelegramConfig;
   aws: AWSConfig;
@@ -41,4 +57,7 @@ export interface Config {
   mongo: MongoConfig;
   times: TimesConfig;
   score: ScoreConfig;
+  monkku: MonkkuConfig;
+  messages: MessageConfig;
+  logLevel: LogLevel;
 }

@@ -5,6 +5,7 @@ export default class Random {
   constructor() {
     this.timeGenerator = new TimeGenerator();
   }
+  /* EIH JANNE ÄLÄ KATO TÄNNE */
   async generateValidMonkkus(
     players: string[],
     minDate: Date,

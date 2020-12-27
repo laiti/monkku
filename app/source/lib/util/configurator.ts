@@ -1,4 +1,6 @@
 import config from 'config';
+import { LogLevel } from './logy';
+
 import {
   Config,
   MongoConfig,
@@ -7,7 +9,9 @@ import {
   AWSConfig,
   TimesConfig,
   ScoreConfig,
-} from '../types/config';
+  MonkkuConfig,
+  MessageConfig,
+} from '../../types/config';
 
 export default class Configurator {
   static async collect(): Promise<Config> {
@@ -17,6 +21,9 @@ export default class Configurator {
     const mongoConfig: MongoConfig = config.get('mongo');
     const timesConfig: TimesConfig = config.get('times');
     const scoreConfig: ScoreConfig = config.get('score');
+    const monkkuConfig: MonkkuConfig = config.get('monkku');
+    const messageConfig: MessageConfig = config.get('messages');
+    const logLevel: LogLevel = config.get('logLevel');
 
     return {
       telegram: telegramConfig,
@@ -25,6 +32,9 @@ export default class Configurator {
       mongo: mongoConfig,
       times: timesConfig,
       score: scoreConfig,
+      monkku: monkkuConfig,
+      messages: messageConfig,
+      logLevel: logLevel,
     };
   }
 }
