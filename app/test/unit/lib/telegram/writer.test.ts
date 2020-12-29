@@ -1,5 +1,5 @@
-import Writer from '../../../source/lib/telegram/writer';
-import { MessageConfig } from '../../../source/types/config';
+import Writer from '../../../../source/lib/telegram/writer';
+import { MessageConfig } from '../../../../source/types/config';
 
 const messageConfig: MessageConfig = {
   totalPot: 'TotalPot message',

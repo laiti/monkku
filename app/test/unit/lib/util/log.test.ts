@@ -78,7 +78,8 @@ describe('Log', () => {
     expect(errorSpy).toHaveBeenCalledWith('ERROR: ', 'error level log message');
   });
   test('Attempt invalid log level', () => {
-    const log = new Log('monkku');
-    expect(log).toThrowError('Log level "monkku" is invalid');
+    expect(() => {
+      new Log('monkku');
+    }).toThrow('Log level "monkku" is invalid');
   });
 });
