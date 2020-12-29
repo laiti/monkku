@@ -1,2 +1,2 @@
 # monkku
-A Telegram game
+A Telegram game about time. Direct competitor of the infamous Dunkku.

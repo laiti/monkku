@@ -4,7 +4,7 @@ import TelegramParser from '../../../telegram/parser';
 import TimeGenerator from '../../../util/time';
 import MessageWriter from '../../../telegram/writer';
 import { Config } from '../../../../types/config';
-import Logy from '../../../util/logy';
+import Logy from '../../../util/log';
 
 export default class FirstMonkku {
   config: Config;

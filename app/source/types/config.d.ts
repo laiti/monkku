@@ -1,4 +1,4 @@
-import { LogLevel } from '../lib/util/logy';
+import { LogLevel } from '../lib/util/log';
 
 export interface MongoConfig {
   user: string;

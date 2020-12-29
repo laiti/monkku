@@ -1,5 +1,5 @@
 import config from 'config';
-import { LogLevel } from './logy';
+import { LogLevel } from './log';
 
 import {
   Config,
