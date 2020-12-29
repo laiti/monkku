@@ -8,13 +8,12 @@ export default class MessageWriter {
 
   async start(playerData: Record<string, number>): Promise<string> {
     let total = 0;
-    let message = `${this.messages.players}: `;
+    let message = `${this.messages.players}:`;
     for (const [handle, bet] of Object.entries(playerData)) {
-      message = `${message} ${handle}(${bet}),`;
+      message = `${message}\n${handle}(${bet})`;
       total = total + bet;
     }
-    // Replace the last comma with total score info
-    message = message.replace(/\/$/, `. ${this.messages.totalPot}: ${total.toString()}`);
+    message = `${message}\n${this.messages.totalPot}: ${total.toString()}`;
     return message;
   }
 }

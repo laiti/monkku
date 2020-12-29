@@ -25,13 +25,13 @@ describe('Time', () => {
 
     describe('dateFromTime', () => {
       test('Get date out of timestamp', async () => {
-        const dateNow = new Date();
-        dateNow.setHours(13);
-        dateNow.setMinutes(37);
-        dateNow.setSeconds(0);
-        dateNow.setMilliseconds(0);
+        const expectedDate = new Date();
+        expectedDate.setHours(13);
+        expectedDate.setMinutes(37);
+        expectedDate.setSeconds(0);
+        expectedDate.setMilliseconds(0);
         const TSDate = await timeGenerator.dateFromTime('13:37');
-        expect(TSDate).toStrictEqual(dateNow);
+        expect(TSDate).toStrictEqual(expectedDate);
       });
     });
   });
