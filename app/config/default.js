@@ -60,7 +60,7 @@ const configuration = {
     players: 'Messis',
   },
 
-  logLevel: info,
+  logLevel: 'info',
 };
 
 module.exports = configuration;
