@@ -1,4 +1,4 @@
-export default class TimeGenerator {
+export default class TimeUtil {
   async randomDate(minDate: Date, maxDate: Date): Promise<Date> {
     const minTime = minDate.getTime();
     const maxTime = maxDate.getTime();
@@ -17,5 +17,13 @@ export default class TimeGenerator {
     resultDate.setSeconds(0);
     resultDate.setMilliseconds(0);
     return resultDate;
+  }
+
+  async isDateBetween(date: Date, minDate: Date, maxDate: Date): Promise<boolean> {
+    const time = date.getTime();
+    if (time < minDate.getTime() || time > maxDate.getTime()) {
+      return false;
+    }
+    return true;
   }
 }

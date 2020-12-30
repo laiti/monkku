@@ -1,10 +1,10 @@
 import { TelegramClient } from 'messaging-api-telegram';
-import TelegramParser from '../../../telegram/parser';
+import TelegramParser from '../../telegram/parser';
 // import { Update } from 'messaging-api-telegram/dist/TelegramTypes';
-import TimeGenerator from '../../../util/time';
-import MessageWriter from '../../../telegram/writer';
-import { Config } from '../../../../types/config';
-import Log from '../../../util/log';
+import TimeGenerator from '../../util/time';
+import MessageWriter from '../../telegram/writer';
+import { Config } from '../../../types/config';
+import Log from '../../util/log';
 
 export default class FirstMonkku {
   config: Config;
@@ -24,7 +24,11 @@ export default class FirstMonkku {
   async run(): Promise<boolean> {
     this.log.info('Running first monkku');
     // Get last messages from Telegram
-    const updates = this.client.getUpdates({ limit: 100 });
+    const updates = this.client.getUpdates({
+      allowedUpdates: ['message'],
+      limit: 100,
+      timeout: 10,
+    });
     // TODO: check for empty updates from API
     // Determine the time window for allowed starts for a game
     const startDate = this.timegen.dateFromTime(this.config.times.staticWeekday[0]);
@@ -34,14 +38,14 @@ export default class FirstMonkku {
     );
 
     // Parse messages and get start message
-    const playerData = this.parser.getPlayers(
+    const playerData = await this.parser.getPlayers(
       await updates,
       this.config.monkku.commandPrefix,
       await startDate,
       endDate,
     );
-    const startMessage = this.message.start(await playerData);
-    const result = this.client.sendMessage(
+    const startMessage = this.message.start(playerData);
+    this.client.sendMessage(
       this.config.telegram.chatId,
       await startMessage,
       this.config.telegram.sendOptions,

@@ -58,6 +58,7 @@ const configuration = {
   messages: {
     totalPot: 'Rahee jaossa',
     players: 'Messis',
+    noPlayers: 'Tänään kukaan ei pelastu',
   },
 
   logLevel: 'info',

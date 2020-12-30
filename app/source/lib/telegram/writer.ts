@@ -7,6 +7,9 @@ export default class MessageWriter {
   }
 
   async start(playerData: Record<string, number>): Promise<string> {
+    if (Object.keys(playerData).length === 0 && playerData.constructor === Object) {
+      return this.messages.noPlayers;
+    }
     let total = 0;
     let message = `${this.messages.players}:`;
     for (const [handle, bet] of Object.entries(playerData)) {

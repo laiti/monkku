@@ -48,6 +48,7 @@ export interface MonkkuConfig {
 export interface MessageConfig {
   totalPot: string;
   players: string;
+  noPlayers: string;
 }
 
 export interface Config {
