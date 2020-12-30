@@ -1,5 +1,6 @@
 import Random from '../../../../source/lib/util/random';
 import TimeGenerator from '../../../../source/lib/util/time';
+import { Monkku } from '../../../../source/types/monkku';
 
 describe('Random', () => {
   const random = new Random();

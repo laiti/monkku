@@ -7,3 +7,7 @@ export interface MessageData {
   date: number;
   username: string;
 }
+
+export interface Monkku {
+  [key: string]: string;
+}

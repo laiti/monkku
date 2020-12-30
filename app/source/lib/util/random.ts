@@ -1,4 +1,5 @@
 import TimeGenerator from './time';
+import { Monkku } from '../../types/monkku';
 
 export default class Random {
   timeGenerator: TimeGenerator;
@@ -10,7 +11,7 @@ export default class Random {
     players: string[],
     minDate: Date,
     maxDate: Date,
-  ): Promise<Record<string, never>> {
+  ): Promise<Monkku> {
     const validMonkkus = {};
     Promise.all(
       players.map(async (player) => {
