@@ -4,26 +4,26 @@ import TelegramParser from '../../../telegram/parser';
 import TimeGenerator from '../../../util/time';
 import MessageWriter from '../../../telegram/writer';
 import { Config } from '../../../../types/config';
-import Logy from '../../../util/log';
+import Log from '../../../util/log';
 
 export default class FirstMonkku {
   config: Config;
   client: TelegramClient;
-  logy: Logy;
+  log: Log;
   timegen: TimeGenerator;
   message: MessageWriter;
   parser: TelegramParser;
   constructor(config: Config) {
     this.config = config;
-    this.logy = new Logy(config.logLevel);
+    this.log = new Log(config.logLevel);
     this.timegen = new TimeGenerator();
-    this.message = new MessageWriter(config.message);
-    this.parser = new TelegramParser();
+    this.message = new MessageWriter(config.messages);
+    this.parser = new TelegramParser(this.log);
     this.client = new TelegramClient({ accessToken: config.telegram.apiKey });
   }
   async run(): Promise<boolean> {
-    this.logy.info('Running first monkku');
-    // Get last messages from TG
+    this.log.info('Running first monkku');
+    // Get last messages from Telegram
     const updates = this.client.getUpdates({ limit: 100 });
     // TODO: check for empty updates from API
     // Determine the time window for allowed starts for a game
