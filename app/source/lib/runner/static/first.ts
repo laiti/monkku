@@ -5,6 +5,7 @@ import TimeGenerator from '../../util/time';
 import MessageWriter from '../../telegram/writer';
 import { Config } from '../../../types/config';
 import Log from '../../util/log';
+import Score from '../../util/score';
 
 export default class FirstMonkku {
   config: Config;
@@ -13,10 +14,12 @@ export default class FirstMonkku {
   timegen: TimeGenerator;
   message: MessageWriter;
   parser: TelegramParser;
+  score: Score;
   constructor(config: Config) {
     this.config = config;
     this.log = new Log(config.logLevel);
     this.timegen = new TimeGenerator();
+    this.score = new Score(config.score);
     this.message = new MessageWriter(config.messages);
     this.parser = new TelegramParser(this.log);
     this.client = new TelegramClient({ accessToken: config.telegram.apiKey });
@@ -44,7 +47,8 @@ export default class FirstMonkku {
       await startDate,
       endDate,
     );
-    const startMessage = this.message.start(playerData);
+    const pot = this.score.calculatePot(playerData);
+    const startMessage = this.message.start(playerData, pot);
     this.client.sendMessage(
       this.config.telegram.chatId,
       await startMessage,

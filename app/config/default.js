@@ -38,6 +38,7 @@ const configuration = {
   // there were no other players
   // monniBonus: give one bonus if monkku was played during the last N seconds
   score: {
+    betMultiplier: 2,
     bonusPerSec: 10,
     monniBonus: [1, 1],
   },

@@ -34,6 +34,7 @@ export interface TimesConfig {
 }
 
 export interface ScoreConfig {
+  betMultiplier: number;
   bonusPerSec: number;
   monniBonus: number[];
 }

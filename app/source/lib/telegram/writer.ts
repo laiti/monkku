@@ -7,17 +7,15 @@ export default class MessageWriter {
     this.messages = messages;
   }
 
-  async start(playerData: PlayerData): Promise<string> {
+  async start(playerData: PlayerData, pot: number): Promise<string> {
     if (Object.keys(playerData).length === 0 && playerData.constructor === Object) {
       return this.messages.noPlayers;
     }
-    let total = 0;
     let message = `${this.messages.players}:`;
     for (const [handle, bet] of Object.entries(playerData)) {
       message = `${message}\n${handle}(${bet})`;
-      total = total + bet;
     }
-    message = `${message}\n${this.messages.totalPot}: ${total.toString()}`;
+    message = `${message}\n${this.messages.totalPot}: ${pot.toString()}`;
     return message;
   }
 }

@@ -24,13 +24,13 @@ describe('Writer', () => {
   });
   describe('Writer tests', () => {
     test('Write start message', async () => {
-      const startMessage = await writer.start(playerData);
+      const startMessage = await writer.start(playerData, 666);
       expect(startMessage).toStrictEqual(
-        `${messageConfig.players}:\nplayer1(1)\nmonku_monku(12)\nholkkeri(5)\nblöääpe(1)\n${messageConfig.totalPot}: 19`,
+        `${messageConfig.players}:\nplayer1(1)\nmonku_monku(12)\nholkkeri(5)\nblöääpe(1)\n${messageConfig.totalPot}: 666`,
       );
     });
     test('Write no players message', async () => {
-      const startMessage = await writer.start({});
+      const startMessage = await writer.start({}, 55);
       expect(startMessage).toStrictEqual(messageConfig.noPlayers);
     });
   });
