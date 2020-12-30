@@ -25,18 +25,12 @@ const configuration = {
     dynamic: false,
     playTime: ['10:00', '20:00'],
     announceTime: '09:30',
-    timeWindow: 1,
+    timeWindow: 1, // how many minutes there is playtime each time
     days: {
-      '6.12.': [2, 'isäm maalliin bonus 🇫🇮'],
-      '24.12.': [3, 'hyvää joulua wuu'],
+      '24.12.': [2, 'merry christmas'],
     },
     randomDays: {
-      '1:100': [0, 'pengarna gå till rymd'],
-      '1:100': [2, 'dubbel pengarna wuu'],
-      '1:200': [3, 'tribbel pengarna WUU'],
-      '1:100': ['bossi', 'bossi ryösti potin'],
-      '1:100': ['oppositeDay', 'rahet lahjoitettiin monnin uhrien muistolle'],
-      '1:100': ['robinHood', 'rahet ryöstettiin rikkaalta monnilta ja annettiin köyhälle spedelle'],
+      '1:100': [0, 'bad luck'],
     },
   },
   // Give bonus point for each bonusPerSec seconds that occur
@@ -52,13 +46,13 @@ const configuration = {
     commandPrefix: '/monkku',
     bossi: 'bossi',
     monni: 'monni',
-    team: 'Monni & The Bois',
+    team: 'team',
   },
 
   messages: {
-    totalPot: 'Rahee jaossa',
-    players: 'Messis',
-    noPlayers: 'Tänään kukaan ei pelastu',
+    totalPot: 'Money in pot',
+    players: 'Players',
+    noPlayers: 'No players today',
   },
 
   logLevel: 'info',
