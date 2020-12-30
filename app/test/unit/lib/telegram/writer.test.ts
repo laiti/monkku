@@ -4,6 +4,7 @@ import { MessageConfig } from '../../../../source/types/config';
 const messageConfig: MessageConfig = {
   totalPot: 'TotalPot message',
   players: 'Players in game',
+  noPlayers: 'No players today',
 };
 
 const playerData = {
@@ -27,6 +28,10 @@ describe('Writer', () => {
       expect(startMessage).toStrictEqual(
         `${messageConfig.players}:\nplayer1(1)\nmonku_monku(12)\nholkkeri(5)\nblöääpe(1)\n${messageConfig.totalPot}: 19`,
       );
+    });
+    test('Write no players message', async () => {
+      const startMessage = await writer.start({});
+      expect(startMessage).toStrictEqual(messageConfig.noPlayers,);
     });
   });
 });

@@ -35,7 +35,7 @@ export interface TimesConfig {
 
 export interface ScoreConfig {
   bonusPerSec: number;
-  monniBonus: number;
+  monniBonus: number[];
 }
 
 export interface MonkkuConfig {

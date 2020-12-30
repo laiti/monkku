@@ -27,7 +27,7 @@ const configuration = {
     announceTime: '09:30',
     timeWindow: 1,
     days: {
-      '6.12.': [2, 'isäm maalliin bonus'],
+      '6.12.': [2, 'isäm maalliin bonus 🇫🇮'],
       '24.12.': [3, 'hyvää joulua wuu'],
     },
     randomDays: {
@@ -42,10 +42,10 @@ const configuration = {
   // Give bonus point for each bonusPerSec seconds that occur
   // between the /monkku command and end of last time in case
   // there were no other players
-  // monniBonus: bonus if monkku was played during the last N seconds
+  // monniBonus: give one bonus if monkku was played during the last N seconds
   score: {
     bonusPerSec: 10,
-    monniBonus: 1,
+    monniBonus: [1, 1],
   },
 
   monkku: {
