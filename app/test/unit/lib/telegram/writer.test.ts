@@ -31,7 +31,7 @@ describe('Writer', () => {
     });
     test('Write no players message', async () => {
       const startMessage = await writer.start({});
-      expect(startMessage).toStrictEqual(messageConfig.noPlayers,);
+      expect(startMessage).toStrictEqual(messageConfig.noPlayers);
     });
   });
 });
