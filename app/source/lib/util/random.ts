@@ -7,11 +7,7 @@ export default class Random {
     this.timeGenerator = new TimeGenerator();
   }
   /* EIH JANNE ÄLÄ KATO TÄNNE */
-  async generateValidMonkkus(
-    players: string[],
-    minDate: Date,
-    maxDate: Date,
-  ): Promise<Monkku> {
+  async generateValidMonkkus(players: string[], minDate: Date, maxDate: Date): Promise<Monkku> {
     const validMonkkus = {};
     Promise.all(
       players.map(async (player) => {
