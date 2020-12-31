@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/laiti/monkku#readme",
   "dependencies": {
-    "axios": "^0.21.1",
     "config": "^3.3.3",
     "messaging-api-telegram": "^1.0.1"
   },
