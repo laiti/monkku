@@ -3,6 +3,8 @@ const configuration = {
     chatId: '',
     apiKey: '',
     apiUrl: 'https://api.telegram.org/bot',
+    timeout: 10,
+    maxAttempts: 3,
     sendOptions: { disableWebPagePreview: true, disableNotification: true },
   },
   aws: {

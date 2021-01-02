@@ -15,6 +15,8 @@ export interface TelegramConfig {
   chatId: string;
   apiKey: string;
   apiUrl: string;
+  timeout: number;
+  maxAttempts: number;
   sendOptions: Record<string, unknown>;
 }
 
