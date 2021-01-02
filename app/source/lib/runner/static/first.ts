@@ -67,7 +67,7 @@ export default class FirstMonkku {
       await startDate,
       endDate,
     );
-    const pot = this.score.calculatePot(playerData);
+    const pot = await this.score.calculatePot(playerData);
     const startMessage = this.message.start(playerData, pot);
     this.client.sendMessage(
       this.config.telegram.chatId,
