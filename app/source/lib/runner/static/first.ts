@@ -57,7 +57,6 @@ export default class FirstMonkku {
       attempts++;
     }
 
-    // TODO: check for empty updates from API
     // Determine the time window for allowed starts for a game
     const startDate = this.timegen.dateFromTime(this.config.times.staticWeekday[0]);
     // endDate = startDate + allowed window size. Window is in minutes, getTime() returns milliseconds
