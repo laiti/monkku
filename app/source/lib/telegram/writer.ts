@@ -18,4 +18,8 @@ export default class MessageWriter {
     message = `${message}\n${this.messages.totalPot}: ${pot.toString()}`;
     return message;
   }
+
+  async retry(seconds: Number): Promise<string> {
+    return `API returned empty, retrying in ${seconds.toString()}`
+  }
 }
