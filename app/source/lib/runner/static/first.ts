@@ -53,7 +53,8 @@ export default class FirstMonkku {
           this.config.telegram.sendOptions,
         );
       }
-      const updates = setTimeout(this.getUpdates, waitTime);
+      updates = setTimeout(this.getUpdates, waitTime);
+      attempts++;
     }
 
     // TODO: check for empty updates from API
