@@ -25,12 +25,12 @@ export default class FirstMonkku {
     this.client = new TelegramClient({ accessToken: config.telegram.apiKey });
   }
   private getUpdates(): Promise<Update[]> {
-  return this.client.getUpdates({
-    allowedUpdates: ['message'],
-    limit: 100,
-    timeout: this.config.telegram.timeout,
-  });
-}
+    return this.client.getUpdates({
+      allowedUpdates: ['message'],
+      limit: 100,
+      timeout: this.config.telegram.timeout,
+    });
+  }
 
   async run(): Promise<boolean> {
     this.log.info('Running first monkku');
@@ -38,7 +38,11 @@ export default class FirstMonkku {
     let updates = [];
     let attempts = 0;
     let waitTime = 0;
-    while(updates === undefined || updates.length == 0 || attempts >= this.config.telegram.maxAttempts) {
+    while (
+      updates === undefined ||
+      updates.length == 0 ||
+      attempts >= this.config.telegram.maxAttempts
+    ) {
       if (attempts > 1) {
         // If we've tried already once, we inform about it and wait for some time before the retry
         waitTime = waitTime + attempts * 10000;
