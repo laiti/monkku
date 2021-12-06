@@ -18,4 +18,8 @@ export default class MessageWriter {
     message = `${message}\n${this.messages.totalPot}: ${pot.toString()}`;
     return message;
   }
+
+  async retry(): Promise<string> {
+    return this.messages.retry;
+  }
 }

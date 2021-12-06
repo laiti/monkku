@@ -15,6 +15,8 @@ export interface TelegramConfig {
   chatId: string;
   apiKey: string;
   apiUrl: string;
+  timeout: number;
+  maxAttempts: number;
   sendOptions: Record<string, unknown>;
 }
 
@@ -50,6 +52,7 @@ export interface MessageConfig {
   totalPot: string;
   players: string;
   noPlayers: string;
+  retry: string;
 }
 
 export interface Config {

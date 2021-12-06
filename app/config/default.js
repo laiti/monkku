@@ -3,6 +3,8 @@ const configuration = {
     chatId: '',
     apiKey: '',
     apiUrl: 'https://api.telegram.org/bot',
+    timeout: 10,
+    maxAttempts: 3,
     sendOptions: { disableWebPagePreview: true, disableNotification: true },
   },
   aws: {
@@ -54,6 +56,7 @@ const configuration = {
     totalPot: 'Money in pot',
     players: 'Players',
     noPlayers: 'No players today',
+    retry: 'API returned empty array, retrying soon',
   },
 
   logLevel: 'info',

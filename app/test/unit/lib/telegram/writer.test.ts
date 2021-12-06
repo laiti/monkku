@@ -5,6 +5,7 @@ const messageConfig: MessageConfig = {
   totalPot: 'TotalPot message',
   players: 'Players in game',
   noPlayers: 'No players today',
+  retry: 'API returned empty, retrying in ',
 };
 
 const playerData = {
@@ -32,6 +33,10 @@ describe('Writer', () => {
     test('Write no players message', async () => {
       const startMessage = await writer.start({}, 55);
       expect(startMessage).toStrictEqual(messageConfig.noPlayers);
+    });
+    test('Write retry message', async () => {
+      const retryMessage = await writer.retry();
+      expect(retryMessage).toStrictEqual(messageConfig.retry);
     });
   });
 });
