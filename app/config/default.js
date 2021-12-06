@@ -56,6 +56,7 @@ const configuration = {
     totalPot: 'Money in pot',
     players: 'Players',
     noPlayers: 'No players today',
+    retry: 'API returned empty array, retrying soon',
   },
 
   logLevel: 'info',

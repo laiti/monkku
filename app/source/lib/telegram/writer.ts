@@ -19,7 +19,7 @@ export default class MessageWriter {
     return message;
   }
 
-  async retry(seconds: number): Promise<string> {
-    return `API returned empty, retrying in ${seconds.toString()}`;
+  async retry(): Promise<string> {
+    return this.messages.retry;
   }
 }

@@ -46,7 +46,7 @@ export default class FirstMonkku {
       if (attempts > 1) {
         // If we've tried already once, we inform about it and wait for some time before the retry
         waitTime = waitTime + attempts * 10000;
-        const retryMessage = this.message.retry(waitTime);
+        const retryMessage = this.message.retry();
         this.client.sendMessage(
           this.config.telegram.chatId,
           await retryMessage,

@@ -52,6 +52,7 @@ export interface MessageConfig {
   totalPot: string;
   players: string;
   noPlayers: string;
+  retry: string;
 }
 
 export interface Config {
