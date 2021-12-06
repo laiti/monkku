@@ -35,8 +35,8 @@ describe('Writer', () => {
       expect(startMessage).toStrictEqual(messageConfig.noPlayers);
     });
     test('Write retry message', async () => {
-      const retryMessage = await.writer.retry(77);
+      const retryMessage = await writer.retry();
       expect(retryMessage).toStrictEqual(messageConfig.retry);
-    }
+    });
   });
 });
