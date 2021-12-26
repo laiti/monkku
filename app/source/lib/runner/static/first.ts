@@ -41,7 +41,7 @@ export default class FirstMonkku {
     while (
       updates === undefined ||
       updates.length == 0 ||
-      attempts >= this.config.telegram.maxAttempts
+      attempts <= this.config.telegram.maxAttempts
     ) {
       if (attempts > 1) {
         // If we've tried already once, we inform about it and wait for some time before the retry
