@@ -9,6 +9,7 @@ export const connect = () => {
     return;
   }
   Mongoose.connect(uri, {
+    useNewUrlParser: true,
     useFindAndModify: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -17,11 +18,11 @@ export const connect = () => {
   database.once('open', async () => {
     console.log('Connected to database');
   });
-  database.on('error', () => {
+  database.on('error', (): void => {
     console.log('Error connecting to database');
   });
 };
-export const disconnect = () => {
+export const disconnect = (): void => {
   if (!database) {
     return;
   }
