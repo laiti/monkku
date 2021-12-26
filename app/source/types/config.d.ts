@@ -4,6 +4,7 @@ export interface MongoConfig {
   user: string;
   password: string;
   database: string;
+  host: string;
 }
 
 export interface DynamoDBConfig {

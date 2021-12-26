@@ -15,6 +15,7 @@ const configuration = {
     apiVersion: '2012-08-10',
   },
   mongo: {
+    host: '',
     user: '',
     password: '',
     database: '',
