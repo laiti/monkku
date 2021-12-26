@@ -12,5 +12,4 @@ export interface IStage {
   updated?: Date;
 }
 
-export interface IStageDocument extends IStage, Document {}
-export interface IStageModel extends Model<IStageDocument> {}
+export interface IStageModel extends IStage, Document {}
