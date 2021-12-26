@@ -1,5 +1,5 @@
 import { MessageConfig } from '../../types/config';
-import { PlayerData } from '../../types/monkku';
+import { Player } from '../../types/monkku';
 
 export default class MessageWriter {
   messages: MessageConfig;
@@ -7,7 +7,7 @@ export default class MessageWriter {
     this.messages = messages;
   }
 
-  async start(playerData: PlayerData, pot: number): Promise<string> {
+  async start(playerData: Player, pot: number): Promise<string> {
     if (Object.keys(playerData).length === 0 && playerData.constructor === Object) {
       return this.messages.noPlayers;
     }

@@ -47,9 +47,9 @@ const configuration = {
 
   monkku: {
     commandPrefix: '/monkku',
-    bossi: 'bossi',
-    monni: 'monni',
-    team: 'team',
+    boss: 'bossi',
+    catfish: 'monni',
+    team: 'joukkue',
   },
 
   messages: {

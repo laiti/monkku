@@ -1,5 +1,5 @@
 import { Update } from 'messaging-api-telegram/dist/TelegramTypes';
-import { PlayerData, MessageData } from '../../types/monkku';
+import { Player, MessageData } from '../../types/monkku';
 import Log from '../util/log';
 import TimeUtil from '../util/time';
 
@@ -39,8 +39,8 @@ export default class TelegramParser {
     cmdPrefix: string,
     minDate: Date,
     maxDate: Date,
-  ): Promise<PlayerData> {
-    const playerData: PlayerData = {};
+  ): Promise<Player> {
+    const players: Player = {};
     for (const update of updates) {
       let msgData: MessageData;
       // Check if the command is valid
@@ -64,9 +64,9 @@ export default class TelegramParser {
       if (isNaN(bet) || bet < 1) {
         bet = 1;
       }
-      playerData[msgData.username] = bet;
+      players[msgData.username] = bet;
       this.log.debug(`Player data updated: { ${msgData.username}: ${bet.toString()} }`);
     }
-    return playerData;
+    return players;
   }
 }
