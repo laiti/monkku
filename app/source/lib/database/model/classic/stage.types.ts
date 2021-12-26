@@ -1,4 +1,4 @@
-import { Document, Model } from 'mongoose';
+import { Document } from 'mongoose';
 import Player from '../../../../types/monkku';
 
 export interface IStage {
