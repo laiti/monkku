@@ -25,12 +25,14 @@
   "homepage": "https://github.com/laiti/monkku#readme",
   "dependencies": {
     "config": "^3.3.3",
-    "messaging-api-telegram": "^1.0.1"
+    "messaging-api-telegram": "^1.0.1",
+    "mongodb": "^4.2.2"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.66",
     "@types/config": "0.0.37",
     "@types/jest": "^26.0.19",
+    "@types/mongodb": "^4.0.7",
     "@types/node": "^14.14.14",
     "@typescript-eslint/eslint-plugin": "^4.10.0",
     "@typescript-eslint/parser": "^4.10.0",
